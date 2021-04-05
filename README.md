@@ -20,11 +20,11 @@ I am proficient in both **R** and Python and generally select the language based
 
 CONCLUDING REMARKS
 
-New scripts or notebooks may be added as needed or appropriate. Interests are encouranged to reach out to me with questions, requests, or solitications.
+New scripts or notebooks may be added as needed or appropriate. Interests are encouraged to reach out to me with questions, requests, or solitications.
 
 For an example of a "just for fun" side project I took up, see the respository **covid19**, which contains plots of COVID-19 data from various parts of the country (regions were selected based on the location of family and friends.) These plots are/were automatically updated daily throughout the coronovirus pandemic.
 
 
 LEGALITY NOTICE
 
-The contents of this public respository are provided for demonstration purposes only. All rights to the products herein are reserved under standard United States copyright law. No source codes may reproduced, distributed, or used to create derivative works without expressed permission by the owner of this respository.
+The contents of this public respository are provided for demonstration purposes only. All rights to the products herein are reserved under standard United States copyright law. No source codes may be reproduced, distributed, or used to create derivative works without expressed permission by the owner of this respository.
