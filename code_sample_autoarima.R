@@ -3,8 +3,6 @@
 # Created:  13 Apr 2020
 # Modified: 
 #
-# NOTES FOR CSS AND NOAA TEAM:
-#
 # The functions below are designed to automatically and efficiently fit ARIMA
 # (AutoRegressive Integrated Moving Average) models to many (O(1000)) drifter
 # time series. Forecasts from these traditional statistical regression methods 
@@ -20,14 +18,6 @@
 # in a vectorized fashion. The original parent script compiles many such
 # forecasts from run.autoarima (over the course of a deployment) and writes
 # them out to a netCDF file.
-#
-# While the vast majority of this research project has been conducted in Python
-# (since it tends to be the language of choice for machine learning), this
-# particular task ended up being most suited for R because of the existence of
-# the auto.arima function. (I was thankful I knew R when I discovered this
-# package!) There are some engineering decisions contained in this script as
-# well as in its parent script that stem from the fact that the results/output
-# would be used in Python.
 #
 # =========================================================================== #
 

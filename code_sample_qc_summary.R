@@ -33,24 +33,6 @@
 # During this first loop through the files, the total number of profiles in
 # each file is also added up. This sum represents the starting number of
 # profiles before filtering out bad/rejected data.
-#
-#
-# NOTES TO CSS AND NOAA TEAM:
-# This script is one component from a pipeline of routines that process and
-# analyze Argo data. This script compiles QC flags while the next script in the
-# routine applies these flags to filter out the undesired data. As stated above,
-# this was created to handle >2 million Argo profiles (from the program's
-# conception through 2015).
-#
-# Incidently, this also provides a follow-up to Tim's interview question about
-# handling a difficult data situation. When I started on this project, I relied
-# only on the QC flags provided with the data set, but later discovered many
-# inconsistencies in how those tests were being performed by the various data
-# acquisition centers. It turned out these inconsistencies were causing me to
-# discard hundreds of thousands of profiles unneccessarily, which meant fewer
-# examples from which to learn. The solution was to find the program's QC manual
-# and implement the tests myself. This script contains most of these tests
-# (a couple more are in the next routine.)
 # 
 # =============================================================================
 # Print header for ".out" file

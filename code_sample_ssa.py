@@ -4,9 +4,6 @@
 # Author:    mgrossi
 # Created:   8 July 2020
 # 
-#
-# NOTES FOR CSS AND NOAA TEAM:
-#
 # This script was designed to perform multivariate singular spectrum analysis
 # (MSSA) on hundreds of drifter velocity time series. The original idea was to
 # decompose the zonal and meridional velocity time series for each drifter,
