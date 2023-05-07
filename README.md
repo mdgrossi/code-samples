@@ -90,4 +90,4 @@ For an example of a "just for fun" side project I took up, see the respository *
 
 ### LEGALITY NOTICE
 
-_The contents of this public respository are provided for demonstration purposes only. All rights to the products herein are reserved under standard United States copyright law. No source codes may be reproduced, distributed, or used to create derivative works without expressed permission by the owner of this respository._
+_The contents of this public respository are provided for demonstration purposes only. All rights to the products and content herein are reserved under standard United States copyright law. No source codes, data, or any other other content provided in this repository may be reproduced, distributed, or used to create derivative works without expressed permission by the owner of this respository._
