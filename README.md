@@ -1,11 +1,12 @@
 # code-samples
+
 #####Sample programming scripts and other technical capabilities to demonstrate data processing, analysis, and management proficiencies
 
 ## SUMMARY
 
 These scripts are intended to be short samples that demonstrate my capabilities as a scientist at handling, processing, and analyzing large data sets using various statistical methods pertinent to different research projects I have conducted over the years. Each script represents a glimpse into much larger routines and/or pipelines of routines that collectively carry out different oceanographic research projects.
 
-This repository is organized as follows:
+This repository, whose content is described below, is organized as follows:
 
 ```bash
 .
@@ -15,17 +16,16 @@ This repository is organized as follows:
 ├── r_examples
 │   ├── autoarima.R
 │   ├── qc_summary.R
-├── teaching_hw\_examples
+├── teaching_hw_examples
 │   ├── EOS80.R
-│   ├── HW01\_sample\_code.R
-│   ├── HW01\_GoM\_data.csv
-│   ├── HW01\_answers.pdf
-│   ├── HW05\_sample\_code.R
-│   ├── HW05\_answers.pdf
+│   ├── HW01_sample_code.R
+│   ├── HW01_GoM_data.csv
+│   ├── HW01_answers.pdf
+│   ├── HW05_sample_code.R
+│   ├── HW05_answers.pdf
 ├── README.md
 └── .gitignore
 ```
-
 
 ## PROFICIENCIES
 
@@ -39,7 +39,7 @@ _Coming soon_
 
 <details>
     <summary>
-        ### Python scripts and Jupyter notebooks
+        Python scripts and Jupyter notebooks
     </summary>
     
 **ssa.py** in demonstrates an object-oriented approach to implementing univariate and multivariate singular spectrum analysis (SSA) in Python. As noted and credited in the docstring, this started with a simple online demonstration that was modified and expanded to suit the needs of the project at hand.
@@ -52,7 +52,7 @@ _Coming soon_
 
 <details>
     <summary>
-        ### R scripts
+        R scripts
     </summary>
 
 **qc_summary.R** is one component from a pipeline that collectively processes and analyzes global temperature-salinity-depth data in the ocean. This script compiles QC flags while the next script in the routine applies these flags to filter out undesired data. This was created to handle >2 million observed profiles. For more information, see the docstring in the file.
@@ -65,7 +65,7 @@ _Coming soon_
 
 <details>
     <summary>
-        ### Teaching heuristics and homework assignments: sample question sets with answers, scripts to solve the problems, and data files where appropriate
+        Teaching heuristics and homework assignments: sample question sets with answers, scripts to solve the problems, and data files where appropriate
     </summary>
 
 **HW01\_\*** and **HW05\_\***: Examples of homework assignments I wrote and graded for an undergraduate Introduction to Physical Oceanography class in which I was tasked with teaching **R**. The students had no previous coding experience, so I incorporated it into each homework and wrote sample scripts that thoroughly explained the step-by-step processes for solving the problems. These samples were given to the students after the homework assignment was due. Shown here are the first and final homework assignments of the semester, demonstrating how far the students came in four months (class homework average was ~89/100). My heuristic technique with the assignments was to walk the students through a key concept in such a way that each part of the question builds upon the previous part, and then provide a practical real-world example of the concept in use. The question sets with answers are provided for context as well as the data used in HW01.
