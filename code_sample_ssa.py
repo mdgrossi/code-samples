@@ -12,13 +12,13 @@
 # to learn.
 #
 # As noted in the SSA docstring below, I started with a simple example of a
-# univariate SSA presented on kaggle and expanded it to suit my needs. To start
-# with, I had to create a multivariate version because velocity components 
-# are not independent and could not handled separately. I also introduced
-# several methods for pattern identification and reconstruction. If one chooses
-# too liberal parameters for SSA, one can end up over-decomposing the time 
-# series leading to multiple modes that really should be one single mode. In
-# most applications, only one (or at most a handful) of time series are being
+# univariate SSA presented on kaggle and expanded it to suit my needs. I first 
+# had to create a multivariate version because velocity components are not
+# independent and could not be handled separately. I also introduced several
+# methods for pattern identification and reconstruction. If one chooses too
+# liberal parameters for SSA, one can end up over-decomposing the time series,
+# leading to multiple modes that really should be one single mode. In most
+# applications, only one (or at most a handful) of time series are being
 # analyzed at a time, so one could play around with these parameters manually.
 # However, I could not do that for hundreds of drifters, so instead, I opted to
 # prefer over-decomposing and then implement ways of objectively regrouping
@@ -26,8 +26,8 @@
 # (where a pattern is defined as a group of statically correlated modes.)
 #
 # I also added some plotting methods for visualization purposes. This routine
-# originally called in a shell script, but I also have an interactive jupyter 
-# notebook version in which I did a lot of experimenting, plotting, etc.
+# was originally called in a shell script, but I also created an interactive
+# jupyter notebook version for experimenting, plotting, etc.
 #
 # =========================================================================== #
 

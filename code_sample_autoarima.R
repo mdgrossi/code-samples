@@ -1,23 +1,23 @@
 # =========================================================================== #
-# Author:   mgrossi
-# Created:  13 Apr 2020
-# Modified: 
+# Author:  mgrossi
+# Created: 13 Apr 2020
+# Updated: 06 May 2023 - Fixed typos in comments
 #
 # The functions below are designed to automatically and efficiently fit ARIMA
 # (AutoRegressive Integrated Moving Average) models to many (O(1000)) drifter
 # time series. Forecasts from these traditional statistical regression methods 
-# serve as performance benchmarks any new machine learning based model we
+# serve as performance benchmarks for any new machine learning based model we
 # develop.
 #
 # These routines are called and used by a larger and more complicated script 
-# that runs a simulation of an operation drifter deployment.
+# that runs a simulation of an operational drifter deployment.
 #
 # auto.arima eliminates the need to conduct a manual parameter search for all
 # time series (once the limits have been determined - see comments below) and
 # implementing it with R's "apply" family of functions allows this to be done
 # in a vectorized fashion. The original parent script compiles many such
-# forecasts from run.autoarima (over the course of a deployment) and writes
-# them out to a netCDF file.
+# forecasts from run.autoarima (over the course of a simulated deployment) and
+# writes them out to a netCDF file.
 #
 # =========================================================================== #
 
@@ -43,8 +43,8 @@ plot_forecast <- function(predicts, targets, xmin=NA, xmax=NA, fname=NA){
   # Plot an ARIMA prediction object with target values. Writes to file if
   # 'fname' is provided.
   
-  # Check that the class of the object passed to 'predicts' is 'forecast'
-  # and convert if necessary.
+  # Check that the class of the object passed to 'predicts' is 'forecast' and
+  # convert if necessary.
   if(class(predicts) != 'forecast'){
     predicts <- structure(predicts, class='forecast')
   }
@@ -78,12 +78,12 @@ run.autoarima <- function(u, v, forecastDays=1){
   # Fit ARIMA models to a collection of drifter velocity time series. This
   # function operates on the full data sets "u" and "v" (utilizing the "apply" 
   # function family for vectorization) to create unique ARIMA models for each 
-  # time series (columns in u and v). These models are then run to create
+  # time series (columns in "u" and "v"). These models are then run to create
   # forecasts of length "forecastDays".
   #
   # Inputs:
   #   u : data.frame containing zonal drifter velocities arranged with time
-  #		  in rows and drifters in columns, with drifter ID as column names
+  #		    in rows and drifters in columns, with drifter ID as column names
   #   v : data.frame containing meridional drifter velocities arranged with
   #       time in rows and drifters in columns, with drifter ID as column
   #       names
@@ -123,10 +123,10 @@ run.autoarima <- function(u, v, forecastDays=1){
   v_ss <- vNorm[,ind]
   
   # Estimate an ARIMA model for each drifter
-  # Note: These max.p and max.q values were determined by a full run with
-  # these set to 96 and 48, respectively.
-  # This is the most computationally expensive step, as it conducts
-  # parameter searches for all available drifters
+  # Note: These max.p and max.q values were determined by a full run with these
+  # set to 96 and 48, respectively.
+  # This is the most computationally expensive step, as it conducts parameter
+  # searches for all available drifters
   uAR <- lapply(u_ss, function(x) auto.arima(x, max.p=16, max.q=12))
   vAR <- lapply(v_ss, function(x) auto.arima(x, max.p=16, max.q=12))
 

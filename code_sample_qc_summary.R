@@ -1,8 +1,8 @@
 
-# R</home/grossi/round_3/scripts/qc_summary.R --vanilla --slave >> /home/grossi/round_3/out/qc_summary.out 2>&1 &
+# R<~/round_3/scripts/qc_summary.R --vanilla --slave >> ~/round_3/out/qc_summary.out 2>&1 &
 
 # =============================================================================
-# Author: Matt Grossi
+# Author:  Matt Grossi
 # Created: 4 Jan 2015
 # Updated: 26 Mar 2019 - uses ncdf4, since ncdf has been deprecated; added
 #                        pressure inversion test and >=20 data points test
@@ -14,6 +14,8 @@
 #          12 Apr 2019 - moved TooShallow test to argo_filtering.R
 #          15 Apr 2019 - added simulated density profile QC checks, profile bin
 #                        counts, and profile max/min depths
+#          06 May 2023 - fixed spacing in comments, removed home directory
+#                        references
 #
 # OVERVIEW
 # The global Argo data set from the program’s conception to the present (2019)
@@ -61,7 +63,7 @@ flagCalc <- function(x){
                   length(na.omit(x[!x %in% 9]))) * 100
     
     flag = ifelse(n == 100, "A",
-           ifelse(75 <= n & n <1 00, "B",
+           ifelse(75 <= n & n <100, "B",
            ifelse(50 <= n & n < 75, "C",
            ifelse(25 <= n & n < 50, "D",
            ifelse(0 < n & n < 25, "E",
@@ -71,7 +73,7 @@ flagCalc <- function(x){
 }
 
 # File list to loop through
-setwd("/home/grossi/argo/prof/all/")
+setwd("~/argo/prof/all/")
 basin <- c("atlantic_ocean", "indian_ocean", "pacific_ocean")
 files <- NULL
 for(b in basin){
@@ -80,7 +82,7 @@ for(b in basin){
     }
 message(paste0(length(files), " files to process."))
 
-# Object to store compiled metadata from all profiles (see explainations below)
+# Object to store compiled metadata from all profiles (see explanations below)
 qc <- NULL
 
 # "Total number of profiles downloaded" counter: keep track of the (cumulative)
@@ -100,9 +102,9 @@ for(fname in files){
 
 # =============================================================================
 # CHECK for required metadata, variables, and QC flags in netCDF file:
-#		JULD					= Julian day
-#		JULD_QC					= Julian day of profile
-#		LATITUDE					= Latitude of profile
+#		JULD					= Julian day of profile
+#		JULD_QC					= Julian day QC flag
+#		LATITUDE				= Latitude of profile
 #		LONGITUDE				= Longitude of profile
 #		POSITION_QC				= Position QC flag
 #		DATA_MODE				= Real-time / Delayed-mode / Adjusted
@@ -184,12 +186,12 @@ if(sum(!varNames %in% names(nc$var))==0){
 # Define parameter bounds and change QC flag to 4 ("bad data") for any
 # measurements that fall outside these physical ranges:
 #
-#		Pressure:	>0 dbar*
-#		Temp:		-2.5 to 40.0 ºC (global climatology and Argo user manual)
-#		Salinity:	20 to 41 psu (from global climatology - Argo uses [2,41])
+#     Pressure:  >0 dbar*
+#	  Temp:	     -2.5 to 40.0 ºC (from global climatology and Argo user manual)
+#     Salinity:  20 to 41 psu (from global climatology - Argo uses [2,41])
 #
-# * Due to the introduction of deep profiling floats capable of diving to 6000
-# m, pressures greater than 2100 m can no longer be set as bad data if these
+# *Due to the introduction of deep profiling floats capable of diving to 6000 m,
+# pressures greater than 2100 m can no longer be set as bad data if these
 # deep profiles are to be retained. Instead, check for minimum depth only, and
 # later mark as NA depths below 2100 m (data below this depth won't be used
 # anyway.)
@@ -201,7 +203,7 @@ if(sum(!varNames %in% names(nc$var))==0){
 #
 # Note: formerly "data out-of-bounds" QC filter
 	presQC <- replace(presQC, pres < 0, 4)
-	presAdjQC <- replace(presAdjQC, presAdj < 0 | presAdj > 2100, 4)
+	presAdjQC <- replace(presAdjQC, presAdj < 0, 4)
 	tempQC <- replace(tempQC, temp < (-2.5) | temp > 40, 4)
 	tempAdjQC <- replace(tempAdjQC, tempAdj < (-2.5) | tempAdj > 40, 4)
 	psalQC <- replace(psalQC, psal < 20 | psal > 41, 4)
@@ -422,7 +424,7 @@ if(length(profilePsalQC) != profilesThisFile){
 
 # WRITE out files
 message("Writing file 'meta_all_profiles.RData'")
-save(qc, file="/home/grossi/round_3/meta_all_profiles.RData")
+save(qc, file="~/round_3/meta_all_profiles.RData")
 
 # =============================================================================
 
