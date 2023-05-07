@@ -1,6 +1,6 @@
 # code-samples
 
-##### Sample programming scripts and other technical capabilities to demonstrate data processing, analysis, and management proficiencies
+#### Sample programming scripts and other technical capabilities to demonstrate data processing, analysis, and management proficiencies
 
 ## SUMMARY
 
