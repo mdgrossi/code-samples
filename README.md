@@ -38,10 +38,8 @@ I am proficient in both **R** and Python and generally select the language based
 
 <details>
     <summary>
-        Disparate examples of typeset documents using LaTeX
+        Examples of typeset documents using LaTeX
     </summary>
-
-**resume.tex** and **resume.pdf**: A version of my professional resume. Self-explanatory.
 
 **sequence\_corpus\_christi.tex** and **sequence\_corpus\_christi.pdf**: I created this for a church music ministry program a few years ago. I put a provided historical text to a chantable psalm tone, composed an organ accompaniment for it, and wrote up liturgical instructions for music ministers. The music notations were created in [MuseScore](https://musescore.org/en "MuseScore"). This is one small part of a much larger (>130 pages) booklet I prepared in LaTeX for the church as a high quality musical and liturgical resource to be used for years to come.
 
