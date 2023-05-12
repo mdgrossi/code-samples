@@ -27,7 +27,6 @@ This repository, whose content is described below, is organized as follows:
 │   ├── HW05_sample_code.R
 │   ├── HW05_answers.pdf
 ├── README.md
-└── .gitignore
 ```
 
 ## PROFICIENCIES
