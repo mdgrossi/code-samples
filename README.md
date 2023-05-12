@@ -1,6 +1,6 @@
 # code-samples
 
-#### Sample programming scripts and other technical capabilities to demonstrate data processing, analysis, and management proficiencies
+#### Sample programming scripts and other technical capabilities to demonstrate proficiencies in such areas as data processing, data management, and teaching.
 
 ## SUMMARY
 
@@ -10,6 +10,9 @@ This repository, whose content is described below, is organized as follows:
 
 ```bash
 .
+├── latex_examples
+│   ├── sequence_corpus_christi.pdf
+│   ├── sequence_corpus_christi.tex
 ├── python_examples
 │   ├── ssa.py
 │   ├── singularSpectrumAnalysis.ipynb
@@ -31,11 +34,24 @@ This repository, whose content is described below, is organized as follows:
 
 I am proficient in both **R** and Python and generally select the language based on the task at hand: being a statistical programming language, **R** is usually best for statistical analysis and visualization and often has nifty tools that haven't been developed (or at least not released publically) in other languages, such as *auto.arima()*. But while machine learning (ML) can be done in **R** as well as in Matlab and many other languages, the ML community has largely settled on Python for its readability, simplicity, and open source status. Accordingly, I opt for Python for model development and machine learning tasks. Example scripts from both languages are provided.
 
-## /docker\_examples
+### docker-demos
 
-_Coming soon_
+Docker containerization examples with commentary are available in the "[docker-demos](https://github.com/mdgrossi/docker-demos)" repository. I created two demonstrations, **linear\_classifier** and **linear\_classifier\_jupyter**, as minimal working examples to accompany an informational presentation about what Docker is, why one should use it, and illustrate how to use it. **linear\_classifier** demonstrates a container that runs a simple Python model, while **linear\_classifier\_jupyter** shows how to run and interact with a Jupyter server in a container. Both have their own README files with more information.
 
-## /python\_examples
+### /latex\_examples
+
+<details>
+    <summary>
+        Disparate examples of typeset documents using LaTeX
+    </summary>
+
+**resume.tex** and **resume.pdf** A version of my professional resume. Self-explanatory.
+
+**sequence\_corpus\_christi.tex** and **sequence\_corpus\_christi.pdf**: I created this for a church music ministry program a few years ago. I put a provided historical text to a chantable psalm tone, composed an organ accompaniment for it, and wrote up liturgical instructions for music ministers. The music notations were created in [MuseScore](https://musescore.org/en "MuseScore"). This is one small part of a much larger (>130 pages) booklet I prepared in LaTeX for the church as a high quality musical and liturgical resource to be used for years to come.
+
+</details> 
+
+### /python\_examples
 
 <details>
     <summary>
@@ -61,7 +77,7 @@ _Coming soon_
 
 </details>
 
-## /teaching\_hw\_examples
+### /teaching\_hw\_examples
 
 <details>
     <summary>
@@ -74,12 +90,7 @@ _Coming soon_
 
 </details>
 
-
-## /latex\_examples
-
-_Coming soon_
-
-### CONCLUDING REMARKS
+## CONCLUDING REMARKS
 
 The annotations contained in these scripts are standard practice in my coding endeavors. First, it helps me review and recall what I wrote and did when looking back after periods of time. Second, as a team player who values reproducability and sharing science, I believe any code I write for any project should be interpretable by anyone who needs to look at it. This is especially crucial for collaborative projects.
 
